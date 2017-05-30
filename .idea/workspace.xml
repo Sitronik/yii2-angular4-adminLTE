@@ -2,85 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c90f10a6-26b9-47ba-bc14-ca7542731eed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/db.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/codeception.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/config/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/config/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/config/main.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/config/params.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/config/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/fixtures/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/mail/layouts/html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/mail/layouts/text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/mail/passwordResetToken-html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/mail/passwordResetToken-text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/_data/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/_output/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/_support/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/_support/UnitTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/unit.suite.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/tests/unit/models/LoginFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/assets/AppAsset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/codeception.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/config/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/config/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/config/main.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/config/params.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/config/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/models/ContactForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/models/SignupForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_data/login_data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_data/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_output/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_support/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_support/FunctionalTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/_support/UnitTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/acceptance.suite.yml.example" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/acceptance/HomeCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/acceptance/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional.suite.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/AboutCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/ContactCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/HomeCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/LoginCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/functional/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit.suite.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/ContactFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/PasswordResetRequestFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/ResetPasswordFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/SignupFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/about.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/contact.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/error.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/requestPasswordResetToken.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/resetPassword.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/views/site/signup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/assets/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/css/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/robots.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/common/models/LoginForm.php" afterPath="$PROJECT_DIR$/backend/models/LoginForm.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/common/models/User.php" afterPath="$PROJECT_DIR$/backend/models/User.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/common/widgets/Alert.php" afterPath="$PROJECT_DIR$/backend/widgets/Alert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/bootstrap.php" afterPath="$PROJECT_DIR$/backend/config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/main.php" afterPath="$PROJECT_DIR$/backend/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/params.php" afterPath="$PROJECT_DIR$/backend/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/SiteController.php" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/layouts/main.php" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/index.php" afterPath="$PROJECT_DIR$/backend/web/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -122,6 +55,7 @@
         <option value="$PROJECT_DIR$/backend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/backend/config/params.php" />
         <option value="$PROJECT_DIR$/backend/web/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -266,12 +200,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496156680083</updated>
-      <workItem from="1496156682112" duration="2975000" />
+      <workItem from="1496156682112" duration="3572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2975000" />
+    <option name="totallyTimeSpent" value="3572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
@@ -326,14 +260,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/web/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -516,10 +442,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
