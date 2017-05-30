@@ -1,23 +1,22 @@
 <?php
 namespace backend\models;
-
 use Yii;
 use yii\base\Model;
-
 /**
- * Login form
+ * LoginForm is the model behind the login form.
+ *
+ * @property User|null $user This property is read-only.
+ *
  */
 class LoginForm extends Model
 {
     public $username;
     public $password;
     public $rememberMe = true;
-
-    private $_user;
-
-
+    /** @var User */
+    private $_user = false;
     /**
-     * @inheritdoc
+     * @return array the validation rules.
      */
     public function rules()
     {
@@ -30,7 +29,6 @@ class LoginForm extends Model
             ['password', 'validatePassword'],
         ];
     }
-
     /**
      * Validates the password.
      * This method serves as the inline validation for password.
@@ -41,38 +39,41 @@ class LoginForm extends Model
     public function validatePassword($attribute, $params)
     {
         if (!$this->hasErrors()) {
-            $user = $this->getUser();
+            $user = $this->getUserByUsername();
             if (!$user || !$user->validatePassword($this->password)) {
                 $this->addError($attribute, 'Incorrect username or password.');
             }
         }
     }
-
     /**
      * Logs in a user using the provided username and password.
-     *
      * @return bool whether the user is logged in successfully
      */
     public function login()
     {
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
-        } else {
-            return false;
+            return Yii::$app->user->login($this->getUserByUsername(), $this->rememberMe ? 3600*24*30 : 0);
         }
+        return false;
     }
-
+    /**
+     * Return User object
+     *
+     * @return User
+     */
+    public function getUser(){
+        return $this->_user;
+    }
     /**
      * Finds user by [[username]]
      *
      * @return User|null
      */
-    protected function getUser()
+    public function getUserByUsername()
     {
-        if ($this->_user === null) {
+        if ($this->_user === false) {
             $this->_user = User::findByUsername($this->username);
         }
-
         return $this->_user;
     }
 }

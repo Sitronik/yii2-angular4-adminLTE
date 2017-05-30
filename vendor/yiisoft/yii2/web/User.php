@@ -4,15 +4,12 @@
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
-
 namespace yii\web;
-
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidValueException;
 use yii\rbac\CheckAccessInterface;
-
 /**
  * User is the class for the `user` application component that manages the user authentication status.
  *
@@ -63,7 +60,6 @@ class User extends Component
     const EVENT_AFTER_LOGIN = 'afterLogin';
     const EVENT_BEFORE_LOGOUT = 'beforeLogout';
     const EVENT_AFTER_LOGOUT = 'afterLogout';
-
     /**
      * @var string the class name of the [[identity]] object.
      */
@@ -148,17 +144,13 @@ class User extends Component
      * @since 2.0.8
      */
     public $acceptableRedirectTypes = ['text/html', 'application/xhtml+xml'];
-
     private $_access = [];
-
-
     /**
      * Initializes the application component.
      */
     public function init()
     {
         parent::init();
-
         if ($this->identityClass === null) {
             throw new InvalidConfigException('User::identityClass must be set.');
         }
@@ -166,9 +158,7 @@ class User extends Component
             throw new InvalidConfigException('User::identityCookie must contain the "name" element.');
         }
     }
-
     private $_identity = false;
-
     /**
      * Returns the identity object associated with the currently logged-in user.
      * When [[enableSession]] is true, this method may attempt to read the user's authentication data
@@ -190,10 +180,8 @@ class User extends Component
                 return null;
             }
         }
-
         return $this->_identity;
     }
-
     /**
      * Sets the user identity object.
      *
@@ -215,7 +203,6 @@ class User extends Component
             throw new InvalidValueException('The identity object must implement IdentityInterface.');
         }
     }
-
     /**
      * Logs in a user.
      *
@@ -249,10 +236,8 @@ class User extends Component
             Yii::info($log, __METHOD__);
             $this->afterLogin($identity, false, $duration);
         }
-
         return !$this->getIsGuest();
     }
-
     /**
      * Logs in a user by the given access token.
      * This method will first authenticate the user by calling [[IdentityInterface::findIdentityByAccessToken()]]
@@ -275,7 +260,6 @@ class User extends Component
             return null;
         }
     }
-
     /**
      * Logs in a user by cookie.
      *
@@ -297,7 +281,6 @@ class User extends Component
             }
         }
     }
-
     /**
      * Logs out the current user.
      * This will remove authentication-related session data.
@@ -319,10 +302,8 @@ class User extends Component
             }
             $this->afterLogout($identity);
         }
-
         return $this->getIsGuest();
     }
-
     /**
      * Returns a value indicating whether the user is a guest (not authenticated).
      * @return bool whether the current user is a guest.
@@ -332,7 +313,6 @@ class User extends Component
     {
         return $this->getIdentity() === null;
     }
-
     /**
      * Returns a value that uniquely represents the user.
      * @return string|int the unique identifier for the user. If `null`, it means the user is a guest.
@@ -341,10 +321,8 @@ class User extends Component
     public function getId()
     {
         $identity = $this->getIdentity();
-
         return $identity !== null ? $identity->getId() : null;
     }
-
     /**
      * Returns the URL that the browser should be redirected to after successful login.
      *
@@ -367,10 +345,8 @@ class User extends Component
                 $url = null;
             }
         }
-
         return $url === null ? Yii::$app->getHomeUrl() : $url;
     }
-
     /**
      * Remembers the URL in the session so that it can be retrieved back later by [[getReturnUrl()]].
      * @param string|array $url the URL that the user should be redirected to after login.
@@ -386,7 +362,6 @@ class User extends Component
     {
         Yii::$app->getSession()->set($this->returnUrlParam, $url);
     }
-
     /**
      * Redirects the user browser to the login page.
      *
@@ -426,7 +401,6 @@ class User extends Component
         }
         throw new ForbiddenHttpException(Yii::t('yii', 'Login Required'));
     }
-
     /**
      * This method is called before logging in a user.
      * The default implementation will trigger the [[EVENT_BEFORE_LOGIN]] event.
@@ -446,10 +420,8 @@ class User extends Component
             'duration' => $duration,
         ]);
         $this->trigger(self::EVENT_BEFORE_LOGIN, $event);
-
         return $event->isValid;
     }
-
     /**
      * This method is called after the user is successfully logged in.
      * The default implementation will trigger the [[EVENT_AFTER_LOGIN]] event.
@@ -468,7 +440,6 @@ class User extends Component
             'duration' => $duration,
         ]));
     }
-
     /**
      * This method is invoked when calling [[logout()]] to log out a user.
      * The default implementation will trigger the [[EVENT_BEFORE_LOGOUT]] event.
@@ -483,10 +454,8 @@ class User extends Component
             'identity' => $identity,
         ]);
         $this->trigger(self::EVENT_BEFORE_LOGOUT, $event);
-
         return $event->isValid;
     }
-
     /**
      * This method is invoked right after a user is logged out via [[logout()]].
      * The default implementation will trigger the [[EVENT_AFTER_LOGOUT]] event.
@@ -500,7 +469,6 @@ class User extends Component
             'identity' => $identity,
         ]));
     }
-
     /**
      * Renews the identity cookie.
      * This method will set the expiration time of the identity cookie to be the current time
@@ -520,7 +488,6 @@ class User extends Component
             }
         }
     }
-
     /**
      * Sends an identity cookie.
      * This method is used when [[enableAutoLogin]] is true.
@@ -541,7 +508,6 @@ class User extends Component
         $cookie->expire = time() + $duration;
         Yii::$app->getResponse()->getCookies()->add($cookie);
     }
-
     /**
      * Determines if an identity cookie has a valid format and contains a valid auth key.
      * This method is used when [[enableAutoLogin]] is true.
@@ -575,7 +541,6 @@ class User extends Component
         $this->removeIdentityCookie();
         return null;
     }
-
     /**
      * Removes the identity cookie.
      * This method is used when [[enableAutoLogin]] is true.
@@ -585,7 +550,6 @@ class User extends Component
     {
         Yii::$app->getResponse()->getCookies()->remove(new Cookie($this->identityCookie));
     }
-
     /**
      * Switches to a new identity for the current user.
      *
@@ -603,23 +567,19 @@ class User extends Component
     public function switchIdentity($identity, $duration = 0)
     {
         $this->setIdentity($identity);
-
         if (!$this->enableSession) {
             return;
         }
-
         /* Ensure any existing identity cookies are removed. */
         if ($this->enableAutoLogin) {
             $this->removeIdentityCookie();
         }
-
         $session = Yii::$app->getSession();
         if (!YII_ENV_TEST) {
             $session->regenerateID(true);
         }
         $session->remove($this->idParam);
         $session->remove($this->authTimeoutParam);
-
         if ($identity) {
             $session->set($this->idParam, $identity->getId());
             if ($this->authTimeout !== null) {
@@ -633,7 +593,6 @@ class User extends Component
             }
         }
     }
-
     /**
      * Updates the authentication status using the information from session and cookie.
      *
@@ -648,7 +607,6 @@ class User extends Component
     {
         $session = Yii::$app->getSession();
         $id = $session->getHasSessionId() || $session->getIsActive() ? $session->get($this->idParam) : null;
-
         if ($id === null) {
             $identity = null;
         } else {
@@ -656,9 +614,7 @@ class User extends Component
             $class = $this->identityClass;
             $identity = $class::findIdentity($id);
         }
-
         $this->setIdentity($identity);
-
         if ($identity !== null && ($this->authTimeout !== null || $this->absoluteAuthTimeout !== null)) {
             $expire = $this->authTimeout !== null ? $session->get($this->authTimeoutParam) : null;
             $expireAbsolute = $this->absoluteAuthTimeout !== null ? $session->get($this->absoluteAuthTimeoutParam) : null;
@@ -668,7 +624,6 @@ class User extends Component
                 $session->set($this->authTimeoutParam, time() + $this->authTimeout);
             }
         }
-
         if ($this->enableAutoLogin) {
             if ($this->getIsGuest()) {
                 $this->loginByCookie();
@@ -677,7 +632,6 @@ class User extends Component
             }
         }
     }
-
     /**
      * Checks if the user can perform the operation as specified by the given permission.
      *
@@ -707,10 +661,8 @@ class User extends Component
         if ($allowCaching && empty($params)) {
             $this->_access[$permissionName] = $access;
         }
-
         return $access;
     }
-
     /**
      * Checks if the `Accept` header contains a content type that allows redirection to the login page.
      * The login page is assumed to serve `text/html` or `application/xhtml+xml` by default. You can change acceptable
@@ -725,16 +677,13 @@ class User extends Component
         if (empty($acceptableTypes) || count($acceptableTypes) === 1 && array_keys($acceptableTypes)[0] === '*/*') {
             return true;
         }
-
         foreach ($acceptableTypes as $type => $params) {
             if (in_array($type, $this->acceptableRedirectTypes, true)) {
                 return true;
             }
         }
-
         return false;
     }
-
     /**
      * Returns auth manager associated with the user component.
      *
@@ -748,7 +697,6 @@ class User extends Component
     {
         return Yii::$app->getAuthManager();
     }
-
     /**
      * Returns the access checker used for checking access.
      * @return CheckAccessInterface

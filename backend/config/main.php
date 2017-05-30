@@ -18,7 +18,7 @@ $config = [
         ],
         'db' => require(dirname(__DIR__)."/config/db.php"),
         'user' => [
-            'identityClass' => 'app\modules\v1\models\User',
+            'identityClass' => 'backend\models\User',
             'enableAutoLogin' => true,
             // 'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
