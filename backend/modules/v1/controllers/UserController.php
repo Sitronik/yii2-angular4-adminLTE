@@ -152,7 +152,7 @@ class UserController extends ActiveController
         return "ok";
     }
 
-    /*public function actionLogin(){
+    public function actionLogin(){
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             $user = $model->getUser();
@@ -179,7 +179,7 @@ class UserController extends ActiveController
 
          if ($model->validate() && $model->signup()) {
              // Send confirmation email
-             //$model->sendConfirmationEmail();
+             $model->sendConfirmationEmail();
 
              $response = \Yii::$app->getResponse();
              $response->setStatusCode(201);
@@ -268,7 +268,7 @@ class UserController extends ActiveController
              // Validation error
              throw new HttpException(422, json_encode($model->errors));
          }
-     }*/
+     }
 
 
     public function actionOptions($id = null) {
