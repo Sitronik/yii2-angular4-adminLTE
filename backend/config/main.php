@@ -17,6 +17,25 @@ $config = [
             ],
         ],
         'db' => require(dirname(__DIR__)."/config/db.php"),
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+        ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            // send all mails to a file by default. You have to set
+            // 'useFileTransport' to false and configure a transport
+            // for the mailer to send real emails.
+            'useFileTransport' => true, // Mails will be saved runtime/mail
+            /*
+             'transport' => [
+             'class' => 'Swift_SmtpTransport',
+             'host' => 'localhost',  // e.g. smtp.mandrillapp.com or smtp.gmail.com
+             'username' => 'username',
+             'password' => 'password',
+             'port' => '587', // Port 25 is a very common port too
+             'encryption' => 'tls', // It is often used, check your provider or mail server specs
+         ], */
+        ],
         'user' => [
             'identityClass' => 'backend\models\User',
             'enableAutoLogin' => true,
